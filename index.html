@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 <body>
     <!-- upper part  -->
@@ -21,7 +22,7 @@
                 <img src="./assets/asset 1.png" alt="company logo">
             </a>
             
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Product</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -31,6 +32,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign Up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
         
 
@@ -38,7 +42,7 @@
     <!-- hero section -->
     <header>
         <div class="container header-section flex">
-            <div class="header-laft">
+            <div class="header-left">
                 <h1>Design Confidently</h1>
                 <p>UsabilityHub is a remote user research platform that takes the guesswork out of design decisions by validating them with real users.</p>
                 <a href="#" class="primary-button  get-started-button">Get Started</a>
@@ -132,7 +136,7 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-image">
                 <img src="./assets/asset 21.png" alt="an image">
             </div>
@@ -234,5 +238,12 @@
     <!-- <div class="spacer" style="height: 100vh;"></div> -->
 
     <script src="https://kit.fontawesome.com/50ad3dd86f.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton=document.getElementById('nav-toggle');
+        const navLinks=document.getElementById('nav-links');
+        toggleButton.addEventListener('click', ()=>{
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
